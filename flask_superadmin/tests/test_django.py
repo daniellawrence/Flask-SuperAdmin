@@ -18,7 +18,8 @@ settings.configure(
         }
     }
 )
-django.setup()
+if django.VERSION > (1, 7, 0):
+    django.setup()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '123456790'
