@@ -1,6 +1,6 @@
 def install_models(*all_models):
     from django.core.management.color import no_style
-    from django.core.management.sql import custom_sql_for_model, emit_post_sync_signal
+    from django.core.management.sql import custom_sql_for_model
     from django.db import connections, router, transaction, models, DEFAULT_DB_ALIAS
     db = 'default'
     connection = connections[db]

@@ -7,6 +7,7 @@ from flask_superadmin import Admin
 
 
 from django.conf import settings
+import django
 
 
 settings.configure(
@@ -17,6 +18,7 @@ settings.configure(
         }
     }
 )
+django.setup()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '123456790'
